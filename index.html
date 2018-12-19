@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/cssreset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <div id="nav_container">
+                <div id="nav_hover" onmouseover="enablePortal()">
+                    <h1>TITLE</h1>
+                </div>
+                <div id="nav_portal" onmouseout="disablePortal()">
+                    <span><a href="#1">CATEGORY 1</a></span>
+                    <span><a href="#2">CATEGORY 2</a></span>
+                    <span><a href="#3">CATEGORY 3</a></span>
+                    <span><a href="#4">CATEGORY 4</a></span>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            function enablePortal() {
+                document.getElementById("nav_hover").style.opacity = 0;
+                document.getElementById("nav_hover").style.width = "0%";
+                document.getElementById("nav_portal").style.opacity = 1;
+                document.getElementById("nav_portal").style.width = "100%";
+            }
+
+            function disablePortal() {
+                document.getElementById("nav_portal").style.opacity = 0;
+                document.getElementById("nav_portal").style.width = "0%";
+                document.getElementById("nav_hover").style.opacity = 1;
+                document.getElementById("nav_hover").style.width = "100%";
+            }
+        </script>
+
+        <div id="slide">
+            <div id="slide_container" onmouseout="revert()">
+                <div class="slide_cats" id="cat0" onmouseover="fade(0)">
+                    <img src="images/cat1.jpg" alt="cat0">
+                </div>
+                <div class="slide_cats" id="cat1" onmouseover="fade(1)">
+                    <img src="images/cat2.jpg" alt="cat1">
+                </div>
+                <div class="slide_cats" id="cat2" onmouseover="fade(2)">
+                    <img src="images/cat3.jpg" alt="cat2">
+                </div>
+                <div class="slide_cats" id="cat3" onmouseover="fade(3)">
+                    <img src="images/cat4.jpg" alt="cat3">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var slides = ["cat0", "cat1", "cat2", "cat3"];
+
+            function fade(x) {
+                for (var i = 0; i < slides.length; i++) {
+                    if (parseInt(x) == i) {
+                        continue;
+                    }
+                    document.getElementById(slides[i]).style.opacity = 0.5;
+                    document.getElementById(slides[i]).style.filter = "blur(5px)";
+                }
+            }
+
+            function revert() {
+                for (var i = 0; i < slides.length; i++) {
+                    document.getElementById(slides[i]).style.opacity = 1;
+                    document.getElementById(slides[i]).style.filter = "blur(0px)";
+                }
+            }
+        </script>
+</body>
+
+</html>

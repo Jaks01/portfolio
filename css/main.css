@@ -1,0 +1,106 @@
+body {
+    color: white;
+    background-color: rgb(13, 13, 24);
+    font-family: fantasy;
+}
+
+nav {
+    height: 10%;
+    width: inherit;
+}
+#nav_container{
+    display: inline-flex;
+    justify-content: center;
+}
+#nav_hover {
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav_hover > h1 {
+    height: 100%;
+    vertical-align: middle;
+    line-height: 200%;
+    transition: all 0.5s ease-in-out;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+#nav_portal {
+    width: inherit;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav_portal > span {
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+
+#nav_portal > span > a {
+    height: 100%;
+    line-height: 100px;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.wrapper {
+    width: 80vw;
+    height: 100vh;
+    background: rgb(13, 13, 24);
+    margin: 0 auto;
+}
+
+#slide {
+    height: 80%;
+    width: 100%;
+    overflow:hidden;
+    white-space: nowrap;
+    animation: bg1 1.5s ease-in-out infinite alternate;
+}
+
+#slide_container{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background: #fff;
+}
+
+.slide_cats{
+    width: 25%;
+    transition: all 1s ease-in-out;
+}
+
+.slide_cats img{
+    object-fit: cover;
+    object-position: 50% 0px;
+}
+
+.slide_cats:hover{
+    z-index: 2;
+    width: 500%;
+}
+
+
+@-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(255, 172, 17), 0 0 70px rgb(255, 172, 17), 0 0 80px rgb(255, 172, 17), 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(255, 172, 17), 0 0 35px rgb(255, 172, 17), 0 0 40px rgb(255, 172, 17), 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+  }
+
+  @-webkit-keyframes bg1 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(255, 172, 17), 0 0 70px rgb(255, 172, 17), 0 0 80px rgb(255, 172, 17), 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(255, 172, 17), 0 0 35px rgb(255, 172, 17), 0 0 40px rgb(255, 172, 17), 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+  }
