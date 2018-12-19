@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>main</title>
+    <meta name="description" content="tracker site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <a href="#grade_tracker">grade tracker</a>
+    <a href="#watched_list">show tracker</a>
+    <br>
+    <hr>
+    <h1>grade tracker</h1>
+    <h2>subject: <span id="subject">math</span></h2>
+    <tr>
+        enter marks:
+        <td>ku: <input type="text" name="k" id="k_inp" maxlength="3" value="0"> </td>
+        <td>think: <input type="text" name="t" id="t_inp" maxlength="3" value="0"> </td>
+        <td>comm: <input type="text" name="c" id="c_inp" maxlength="3" value="0"> </td>
+        <td>app: <input type="text" name="a" id="a_inp" maxlength="3" value="0"> </td>
+        <button onclick="addMarks()">submit</button>
+    </tr>
+    <table>
+        <tr>
+            <th>ku</th>
+            <th>think</th>
+            <th>comm</th>
+            <th>app</th>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+        </tr>
+    </table>
+    
+    <script>
+        var k = [];
+
+        function addMarks() {
+            alert(document.getElementById("k_inp").values);
+        }
+    </script>
+</body>
+
+</html>
