@@ -10,51 +10,90 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 
-<body>
+<body onload="notTimeOnly()">
     <div class="wrapper">
-        <nav>
+        <nav id="navigation">
             <div id="nav_container">
-                <div id="nav_hover" onmouseover="enablePortal()">
-                    <h1>TITLE</h1>
+                <div id="nav_hover" onclick="timeOnly()">
+                    <h1 id="nav_time">20:43:06</h1>
                 </div>
-                <div id="nav_portal" onmouseout="disablePortal()">
-                    <span><a href="#1">CATEGORY 1</a></span>
-                    <span><a href="#2">CATEGORY 2</a></span>
-                    <span><a href="#3">CATEGORY 3</a></span>
-                    <span><a href="#4">CATEGORY 4</a></span>
-                </div>
+                <div id="nav_line"></div>
             </div>
         </nav>
 
         <script>
-            function enablePortal() {
-                document.getElementById("nav_hover").style.opacity = 0;
-                document.getElementById("nav_hover").style.width = "0%";
-                document.getElementById("nav_portal").style.opacity = 1;
-                document.getElementById("nav_portal").style.width = "100%";
-            }
+                var upd = setInterval(time, 1000);
+                function time(){
+                    var t = new Date();
+                    document.getElementById("nav_time").innerHTML = pad(t.getHours()) +":"+ pad(t.getMinutes()) +":"+ pad(t.getSeconds());
+                }  
+                function pad(num){
+                    return (num < 10 ? '0' : '') + num
+                }  
+                var inTime = false;
+                function timeOnly(){
+                    if(inTime){
+                        notTimeOnly();
+                        return;
+                    }
 
-            function disablePortal() {
-                document.getElementById("nav_portal").style.opacity = 0;
-                document.getElementById("nav_portal").style.width = "0%";
-                document.getElementById("nav_hover").style.opacity = 1;
-                document.getElementById("nav_hover").style.width = "100%";
-            }
+                    document.getElementById("navigation").style.height = "100%";
+
+                    document.getElementById("nav_hover").style.width = "100%";
+                    document.getElementById("nav_hover").style.height = "100%";
+
+                    document.getElementById("nav_time").style.width = "55.5%";
+                    document.getElementById("nav_time").style.height = "100%";
+                    document.getElementById("nav_time").style.fontSize = "256px";
+                    document.getElementById("nav_time").style.margin = "auto";
+                    document.getElementById("nav_time").style.lineHeight = "100%";
+                    document.getElementById("nav_time").style.top = "35%";
+                    document.getElementById("nav_time").style.position = "relative";
+
+                    document.getElementById("nav_line").style.display = "none";
+                    inTime = true;
+                }  
+                
+                function notTimeOnly(){
+                    /*
+                    document.getElementById("navigation").removeAttribute("style");
+                    document.getElementById("nav_time").removeAttribute("style");
+                    document.getElementById("nav_hover").removeAttribute("style");
+                    document.getElementById("nav_line").removeAttribute("style");
+                    */
+                   
+                    document.getElementById("navigation").style.height = "10%";
+
+                    document.getElementById("nav_hover").style.width = "20%";
+                    document.getElementById("nav_hover").style.height = "80%";
+
+                    document.getElementById("nav_time").style.width = "100%";
+                    document.getElementById("nav_time").style.height = "100%";
+                    document.getElementById("nav_time").style.fontSize = "48px";
+                    document.getElementById("nav_time").style.margin = "auto";
+                    document.getElementById("nav_time").style.lineHeight = "200%";
+                    document.getElementById("nav_time").style.top = "0%";
+                    document.getElementById("nav_time").style.position = "block";
+
+                    document.getElementById("nav_line").style.display = "none";
+
+                    inTime = false;
+                }
         </script>
 
         <div id="slide">
             <div id="slide_container" onmouseout="revert()">
                 <div class="slide_cats" id="cat0" onmouseover="fade(0)">
-                    <img src="images/cat1.jpg" alt="cat0">
+                    <img src="images/cat1.png" alt="cat0">
                 </div>
                 <div class="slide_cats" id="cat1" onmouseover="fade(1)">
-                    <img src="images/cat2.jpg" alt="cat1">
+                    <img src="images/cat1.png" alt="cat1">
                 </div>
                 <div class="slide_cats" id="cat2" onmouseover="fade(2)">
-                    <img src="images/cat3.jpg" alt="cat2">
+                    <img src="images/cat1.png" alt="cat2">
                 </div>
                 <div class="slide_cats" id="cat3" onmouseover="fade(3)">
-                    <img src="images/cat4.jpg" alt="cat3">
+                    <img src="images/cat1.png" alt="cat3">
                 </div>
             </div>
         </div>
