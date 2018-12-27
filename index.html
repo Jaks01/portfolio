@@ -1,119 +1,137 @@
 <!DOCTYPE html>
+<html <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Jackson's - Site</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/cssreset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/neons.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="cssreset.css" />
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav id="navigation">
-            <div id="nav_container">
-                <div id="nav_hover" onclick="timeOnly()">
-                    <h1 id="nav_time" class="head_neon">20:43:06</h1>
+    <div class="wrapper">
+        <article class="main_sector">
+            <section class="info">
+                <div class="info_texts">
+                    <div class="header_container">
+                        <div class="general header_text header_main">
+                            <h1 class="info_header">General Info</h1>
+                            <p class="info_desc">general information about me</p>
+                        </div>
+                        <div class="project header_text">
+                            <h1 class="info_header">Projects</h1>
+                            <p class="info_desc">side projects I'm working on</p>
+                        </div>
+                        <div class="asset header_text">
+                            <h1 class="info_header">Assets</h1>
+                            <p class="info_desc">i make assets</p>
+                        </div>
+                        <div class="other header_text">
+                            <h1 class="info_header">Other</h1>
+                            <p class="info_desc">some other random stuff</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+                <div class="panel">
+                    <div class="anchor_panel">
+                        <ul>
+                            <li onclick="changeText('general')">General Info</li>
+                            <li onclick="changeText('project')">Projects</li>
+                            <li onclick="changeText('asset')">Assets</li>
+                            <li onclick="changeText('other')">Other Stuff</li>
+                        </ul>
+                        <div class="anchor_line"></div>
+                    </div>
+                    <div class="main_content">
+                        <div class="texts_container">
+                            <div class="general content_texts main_text">
+                                <p>There is nothing much to see here.
+                                    <br><br>
+                                    The pictures to the right are just placeholders.
+                                    <br>
+                                    I made basically nothing good enough to put on here, so this site is pretty much
+                                    empty.
+                                    <br><br>
+                                    This panel should be full of texts but dunno what to put on here.
+                                    <br>
+                                    <br>
+                                    Though, there are some cool background effects. (TBA)
+                                </p>
+                            </div>
+                            <div class="project content_texts">
+                                <p>These are the project I have worked on.
+                                    <br>
+                                    As you can see, there is nothing here, but I will add some in the future.
+                                    <br><br>
+                                    While you're here, you can go download my game on Google Play Store.
+                                    <br><br>
+                                    <a href="https://play.google.com/store/apps/details?id=com.jackson.deflect&hl=en">Here!</a>
+                                </p>
+                            </div>
+                            <div class="asset content_texts">
+                                <p>I make assets on my own accord or as per request.
+                                    <br><br>
+                                    So, if you need assets that are 2D or 3D for your game and whatnot, you can contact
+                                    me.
+                                    <br><br>
+                                    Currently, some of my assets are on <a href="https://jaks.itch.io/">itch.io</a>
+                                    and you can head over there to check them out.
+                                </p>
+                            </div>
+                            <div class="other content_texts">
+                                <p>Here are some of the side stuff.
+                                    <br><br>
+                                    I draw. So when I've actually drawn some nice stuff, I'll put it on here.
+                                    <br><br>
+                                    Watched anime list will be on here in the future for my easy access sake.
+                                    <br><br>
+                                    Will also put other stuff (ex. school) on here too. Maybe.
+                                    <br><br>
+                                </p>
+                                <h1>Socials</h1>
+                                <p>
+                                    <img class="social" src="imgs/ig.png" alt="ig logo">
+                                    &emsp;&emsp;@jkekson
+                                    <br>
+                                    <img class="social" src="imgs/gm.png" alt="gmail logo">
+                                    &emsp;&emsp;jacksonus0204@gmail.com
+                                    <br>
+                                    DM for others.
+                                </p>
+                            </div>
+                        </div>
 
-        <div id="slide">
-            <div id="slide_container" onmouseout="revert()">
-                <div class="slide_cats" id="cat0" onmouseover="fade(0)">
-                    <a href="pages/project.html"><img src="images/cat1.png" alt="to project page"></a>
+                        <div class="content_slideshow">
+                            <div class="content_offset">
+                                <img class="slide" src="imgs/holder1.png">
+                                <img class="slide" src="imgs/holder2.jpg">
+                                <img class="slide" src="imgs/holder3.jpg">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide_cats" id="cat1" onmouseover="fade(1)">
-                    <a href="pages/artwork.html"><img src="images/cat1.png" alt="to artwork page"></a>
-                </div>
-                <div class="slide_cats" id="cat2" onmouseover="fade(2)">
-                    <a href="pages/asset.html"><img src="images/cat1.png" alt="to assets page"></a>
-                </div>
-                <div class="slide_cats" id="cat3" onmouseover="fade(3)">
-                    <a href="pages/other.html"><img src="images/cat1.png" alt="to others page"></a>
-                </div>
-            </div>
-        </div>
-        <script>
-            var slides = ["cat0", "cat1", "cat2", "cat3"];
+            </section>
+        </article>
 
-            function fade(x) {
-                for (var i = 0; i < slides.length; i++) {
-                    if (parseInt(x) == i) {
+        <script class="texts">
+            var texts = ["general", "project", "asset", "other"];
+
+            function changeText(id) {
+                for (var i = 0; i < texts.length; i++) {
+                    if (texts[i] == id) {
+                        document.getElementsByClassName(id)[1].classList.add("main_text");
+                        document.getElementsByClassName(id)[0].classList.add("header_main");
                         continue;
                     }
-                    document.getElementById(slides[i]).style.opacity = 0.5;
-                    document.getElementById(slides[i]).style.filter = "blur(5px)";
-                    document.getElementById(slides[i] + "link")
-                }
-            }
-
-            function revert() {
-                for (var i = 0; i < slides.length; i++) {
-                    document.getElementById(slides[i]).style.opacity = 1;
-                    document.getElementById(slides[i]).style.filter = "blur(0px)";
+                    document.getElementsByClassName(texts[i])[1].classList.remove("main_text");
+                    document.getElementsByClassName(texts[i])[0].classList.remove("header_main");
                 }
             }
         </script>
-        <script>
-            var upd = setInterval(time, 1000);
-
-            function time() {
-                var t = new Date();
-                document.getElementById("nav_time").innerHTML = pad(t.getHours()) + ":" + pad(t.getMinutes()) + ":" +
-                    pad(t.getSeconds());
-            }
-
-            function pad(num) {
-                return (num < 10 ? '0' : '') + num
-            }
-            var inTime = false;
-
-            function timeOnly() {
-                if (inTime) {
-                    notTimeOnly();
-                    return;
-                }
-
-                document.getElementById("navigation").style.height = "100%";
-
-                document.getElementById("nav_hover").style.width = "100%";
-                document.getElementById("nav_hover").style.height = "100%";
-
-                document.getElementById("nav_time").style.width = "55.5%";
-                document.getElementById("nav_time").style.height = "100%";
-                document.getElementById("nav_time").style.fontSize = "12.75vw";
-                document.getElementById("nav_time").style.margin = "auto";
-                document.getElementById("nav_time").style.lineHeight = "100%";
-                document.getElementById("nav_time").style.top = "35%";
-                document.getElementById("nav_time").style.position = "relative";
-
-                document.getElementById("nav_line").style.display = "none";
-                inTime = true;
-            }
-
-            function notTimeOnly() {
-                document.getElementById("navigation").style.height = "98px";
-
-                document.getElementById("nav_hover").style.width = "20%";
-                document.getElementById("nav_hover").style.height = "80%";
-
-                document.getElementById("nav_time").style.width = "100%";
-                document.getElementById("nav_time").style.height = "100%";
-                document.getElementById("nav_time").style.fontSize = "300%";
-                document.getElementById("nav_time").style.margin = "auto";
-                document.getElementById("nav_time").style.lineHeight = "200%";
-                document.getElementById("nav_time").style.top = "0%";
-                document.getElementById("nav_time").style.position = "block";
-
-                document.getElementById("nav_line").style.display = "none";
-
-                inTime = false;
-            }
-        </script>
+    </div>
 </body>
 
 </html>

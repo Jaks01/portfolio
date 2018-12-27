@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jackson's - Site</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/cssreset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/neons.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav id="navigation">
+            <div id="nav_container">
+                <div id="nav_hover" onclick="timeOnly()">
+                    <h1 id="nav_time" class="head_neon">20:43:06</h1>
+                </div>
+            </div>
+        </nav>
+
+        <div id="slide">
+            <div id="slide_container" onmouseout="revert()">
+                <div class="slide_cats" id="cat0" onmouseover="fade(0)">
+                    <a href="pages/project.html"><img src="images/cat1.png" alt="to project page"></a>
+                </div>
+                <div class="slide_cats" id="cat1" onmouseover="fade(1)">
+                    <a href="pages/artwork.html"><img src="images/cat1.png" alt="to artwork page"></a>
+                </div>
+                <div class="slide_cats" id="cat2" onmouseover="fade(2)">
+                    <a href="pages/asset.html"><img src="images/cat1.png" alt="to assets page"></a>
+                </div>
+                <div class="slide_cats" id="cat3" onmouseover="fade(3)">
+                    <a href="pages/other.html"><img src="images/cat1.png" alt="to others page"></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            var slides = ["cat0", "cat1", "cat2", "cat3"];
+
+            function fade(x) {
+                for (var i = 0; i < slides.length; i++) {
+                    if (parseInt(x) == i) {
+                        continue;
+                    }
+                    document.getElementById(slides[i]).style.opacity = 0.5;
+                    document.getElementById(slides[i]).style.filter = "blur(5px)";
+                    document.getElementById(slides[i] + "link")
+                }
+            }
+
+            function revert() {
+                for (var i = 0; i < slides.length; i++) {
+                    document.getElementById(slides[i]).style.opacity = 1;
+                    document.getElementById(slides[i]).style.filter = "blur(0px)";
+                }
+            }
+        </script>
+        <script>
+            var upd = setInterval(time, 1000);
+
+            function time() {
+                var t = new Date();
+                document.getElementById("nav_time").innerHTML = pad(t.getHours()) + ":" + pad(t.getMinutes()) + ":" +
+                    pad(t.getSeconds());
+            }
+
+            function pad(num) {
+                return (num < 10 ? '0' : '') + num
+            }
+            var inTime = false;
+
+            function timeOnly() {
+                if (inTime) {
+                    notTimeOnly();
+                    return;
+                }
+
+                document.getElementById("navigation").style.height = "100%";
+
+                document.getElementById("nav_hover").style.width = "100%";
+                document.getElementById("nav_hover").style.height = "100%";
+
+                document.getElementById("nav_time").style.width = "55.5%";
+                document.getElementById("nav_time").style.height = "100%";
+                document.getElementById("nav_time").style.fontSize = "12.75vw";
+                document.getElementById("nav_time").style.margin = "auto";
+                document.getElementById("nav_time").style.lineHeight = "100%";
+                document.getElementById("nav_time").style.top = "35%";
+                document.getElementById("nav_time").style.position = "relative";
+
+                document.getElementById("nav_line").style.display = "none";
+                inTime = true;
+            }
+
+            function notTimeOnly() {
+                document.getElementById("navigation").style.height = "98px";
+
+                document.getElementById("nav_hover").style.width = "20%";
+                document.getElementById("nav_hover").style.height = "80%";
+
+                document.getElementById("nav_time").style.width = "100%";
+                document.getElementById("nav_time").style.height = "100%";
+                document.getElementById("nav_time").style.fontSize = "300%";
+                document.getElementById("nav_time").style.margin = "auto";
+                document.getElementById("nav_time").style.lineHeight = "200%";
+                document.getElementById("nav_time").style.top = "0%";
+                document.getElementById("nav_time").style.position = "block";
+
+                document.getElementById("nav_line").style.display = "none";
+
+                inTime = false;
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+html, body {
+    color: white;
+    background-color: rgb(13, 13, 24);
+    font-family: fantasy;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+nav {
+    height: 98px;
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#wrapper {
+    width: 80vw;
+    height: 100%;
+    background: rgb(13, 13, 24);
+    margin: 0 auto;
+}
+
+#nav_container{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    justify-content: left;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#nav_hover {
+    width: 20%;
+    height: 80%;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav_time{
+    font-size: 300%;
+    height: 100%;
+    width: 100%;
+    line-height: 200%;
+    text-align: left;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#slide {
+    height: 80%;
+    width: 100%;
+    -webkit-animation: bg 1.5s ease-in-out infinite alternate;
+    animation: bg 1.5s ease-in-out infinite alternate;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#slide_container{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background: #fff;
+}
+
+.slide_cats{
+    width: 25%;
+    background: orange;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    will-change: auto;
+}
+
+
+.slide_cats img{
+    object-fit: cover;
+    width: 100%;
+    object-position: 50% 0px;
+}
+
+.slide_cats:hover{
+    z-index: 2;
+    width: 400%;
+}
+
+  @keyframes bg {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 
+      0 0 40px rgb(255, 172, 17), 0 0 70px rgb(255, 172, 17), 0 0 80px rgb(255, 172, 17),
+       0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 
+        0 0 20px rgb(255, 172, 17), 0 0 35px rgb(255, 172, 17), 0 0 40px rgb(255, 172, 17),
+         0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+  }

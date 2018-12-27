@@ -1,0 +1,35 @@
+.head_neon{
+    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.selected_neon{
+    -webkit-animation: bg 1.5s ease-in-out infinite alternate;
+    animation: bg 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,
+       0 0 40px rgb(255, 172, 17), 0 0 50px rgb(255, 172, 17), 0 0 60px rgb(255, 172, 17), 
+       0 0 70px #FF1177, 0 0 80px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+       0 0 20px rgb(255, 172, 17), 0 0 25px rgb(255, 172, 17), 0 0 30px rgb(255, 172, 17), 
+       0 0 35px #FF1177, 0 0 40px #FF1177;
+    }
+  }
+
+  @keyframes bg {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 
+      0 0 40px rgb(255, 172, 17), 0 0 70px rgb(255, 172, 17), 0 0 80px rgb(255, 172, 17),
+       0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 
+        0 0 20px rgb(255, 172, 17), 0 0 35px rgb(255, 172, 17), 0 0 40px rgb(255, 172, 17),
+         0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+  }
