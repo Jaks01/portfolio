@@ -8,7 +8,7 @@
 }
 .wrapper{
     font-family: custom-normal;
-    max-width: 100%;
+    width: 1366px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -26,7 +26,7 @@
 .anchor_panel{
     position: absolute;
     top: 50px;
-    left: 65vw;
+    left: 833px;
     z-index: 1;
     color: white;
     width: 256px;
@@ -124,8 +124,8 @@
 .panel{
     position: relative;
     height: 592px;
-    width: 87%;
-    margin-left: 10%;
+    width: 1078px;
+    left: 123.75px;
 }
 
 .main_content{
@@ -133,7 +133,7 @@
 }
 
 .texts_container{
-    width: 40%;
+    width: 431.52px;
     height: inherit;
     position: absolute;
     display: inline-flex;
@@ -160,8 +160,8 @@
 
 .content_slideshow{
     position: absolute;
-    left: 36vw;
-    width: 35%;
+    left: 461px;
+    width: 378px;
     height: 100%;
 }
 
@@ -187,9 +187,9 @@
 .slide:hover{
     opacity: 1;
     z-index: 3;
-    height: 18vw;
-    width: 112.5%;
-    transform: translate(-5%, 0px);
+    height: 40%;
+    width: 456px;
+    transform: translate(-40px, 0px);
     box-shadow: 24px 12px 8px rgb(21, 14, 27);
 }
 
@@ -197,10 +197,4 @@
     width: 24px;
     height: 24px;
     position: absolute;
-}
-
-@media (hover:none){
-    body{
-        margin: 100px;
-    }
 }
