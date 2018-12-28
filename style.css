@@ -198,9 +198,3 @@
     height: 24px;
     position: absolute;
 }
-
-@media (hover:none){
-    body{
-        margin: 100px;
-    }
-}
