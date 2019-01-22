@@ -53,7 +53,7 @@
     width: 80%;
     height: 2px;
     background: white;
-    box-shadow: 16px 32px 4px rgba(255, 204, 36, 0.25);
+    box-shadow: 8px 16px 4px rgba(255, 204, 36, 0.25);
 }
 .anchor_panel ul{
     position: relative;
@@ -66,7 +66,7 @@
     margin: auto 3%;
     font-size: 16px;
     text-align: center;
-    text-shadow: 32px 16px 4px rgba(255, 204, 36, 0.25);
+    text-shadow: 12px 6px 4px rgba(255, 204, 36, 0.25);
     transition: text-shadow 0.5s ease;
     will-change: text-shadow;
 }
@@ -115,7 +115,7 @@
     width: 256px;
     height: 48px;
     margin: 0 auto;
-    text-shadow: 32px 16px 4px rgba(102, 121, 163, 0.5);
+    text-shadow: 24px 12px 4px rgba(102, 121, 163, 0.5);
     transition: text-shadow 0.5s ease;
     will-change: text-shadow;
 }
