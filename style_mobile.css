@@ -17,8 +17,8 @@
 }
 
 .main_sector{
-    background: url("imgs/second_bg.jpg");
-    background-position-x: 20%;
+    background: url("imgs/main_bg2.png");
+    background-position-x: 50%;
     background-repeat: no-repeat;
     height: 979px;
 }
@@ -141,16 +141,16 @@
 .main_content{
     height: 100%;
     margin: auto 5%;
-    top: 128px;
+    top: 84px;
     position: relative;
 }
 
 .texts_container{
     width: 100%;
-    height: 380px;
+    height: 360px;
     display: inline-flex;
     flex-direction: column;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     top: 16px;
     position: relative;
 }
@@ -159,7 +159,7 @@
     color: white;
     width: 100%;
     height: 0px;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
     opacity: 0;
     text-align: center;
