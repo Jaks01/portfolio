@@ -140,6 +140,10 @@
     flex-direction: column;
 }
 
+.texts_container a{
+    color: dodgerblue;
+}
+
 .content_texts{
     color: white;
     width: 100%;
