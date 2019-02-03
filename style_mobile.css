@@ -7,6 +7,7 @@
     src: url(GeosansLight.ttf);
 }
 .wrapper{
+    opacity: 0;
     font-family: custom-normal;
     max-width: 100%;
     margin: auto;

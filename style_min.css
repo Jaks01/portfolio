@@ -12,6 +12,7 @@ body{
     transform-origin: 0 0;
 }
 .wrapper{
+    opacity: 0;
     font-family: custom-normal;
     width: 1366px;
     margin: auto;
