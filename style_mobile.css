@@ -6,6 +6,13 @@
     font-family: custom-normal;
     src: url(GeosansLight.ttf);
 }
+body{
+    zoom: 1;
+    transform: scale(1.0);
+    transform-origin: 0 0;
+    background: black;
+}
+
 .wrapper{
     opacity: 0;
     font-family: custom-normal;
@@ -14,11 +21,10 @@
     position: relative;
     overflow: hidden;
     box-sizing: content-box;
-    background: white;
+    background: black;
 }
 
 .main_sector{
-    background: url("imgs/main_bg2.png");
     background-position-x: 50%;
     background-repeat: no-repeat;
     height: 979px;
@@ -31,6 +37,7 @@
 }
 
 .panel{
+    opacity: 0;
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -71,7 +78,7 @@
 }
 .anchor_panel li{
     margin: auto 3%;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     text-shadow: 12px 6px 4px rgba(255, 165, 29, 0.384);
     transition: text-shadow 0.5s ease;

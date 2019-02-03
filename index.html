@@ -14,15 +14,15 @@
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 </head>
 
-<body onload="$('.wrapper').delay(200).animate({'opacity': '1'}, 750);">
+<body onload="$('.wrapper').delay(100).animate({'opacity': '1'}, 550); $('.panel').delay(450).animate({'opacity': '1'}, 950);">
     <div class="wrapper">
-        <article class="main_sector">
+        <article class="main_sector" style="background: url('imgs/main_bg2.png');">
             <section class="info">
                 <div class="panel">
                     <div class="info_texts">
                         <div class="header_container">
                             <div class="general header_text header_main">
-                                <h1 class="info_header">General Info</h1>
+                                <h1 class="info_header">General</h1>
                                 <p class="info_desc">general informations</p>
                             </div>
                             <div class="project header_text">
@@ -31,10 +31,10 @@
                             </div>
                             <div class="asset header_text">
                                 <h1 class="info_header">Assets</h1>
-                                <p class="info_desc">I make assets</p>
+                                <p class="info_desc">i make assets</p>
                             </div>
                             <div class="other header_text">
-                                <h1 class="info_header">Other</h1>
+                                <h1 class="info_header">Others</h1>
                                 <p class="info_desc">some other random stuff</p>
                             </div>
                         </div>
@@ -42,10 +42,10 @@
 
                     <div class="anchor_panel">
                         <ul>
-                            <li onclick="changeText('general')">General Info</li>
+                            <li onclick="changeText('general')">General</li>
                             <li onclick="changeText('project')">Projects</li>
                             <li onclick="changeText('asset')">Assets</li>
-                            <li onclick="changeText('other')">Other Stuff</li>
+                            <li onclick="changeText('other')">Others</li>
                         </ul>
                         <div class="anchor_line"></div>
                     </div>
@@ -54,11 +54,11 @@
                             <div class="general content_texts main_text">
                                 <p>Project hosting hub for Jackson
                                     <br><br>
-                                    Find projects I have completed under "Projects" tab for more detail
+                                    Find projects I have completed under <a onclick="changeText('project')">Projects</a> for more detail
                                     <br><br>
-                                    Links to the assets that I have published are under "Assets"
+                                    Links to the assets that I have published are under <a onclick="changeText('asset')">Assets</a>
                                     <br><br>
-                                    Contact info and other miscellaneous are under "Other Stuff"
+                                    Contact info and other miscellaneous are under <a onclick="changeText('other')">Others</a>
                                 </p>
                             </div>
                             <div class="project content_texts">
@@ -76,15 +76,15 @@
                                         <li>Work In Progress:</li>
                                         <li><a target="_blank" href="https://github.com/Jaks01/2d-game-prototype/blob/master/opentk_documentation.docx">
                                             OpenTK Documentations</a></li>
+                                        <li>Portfolio - Website</li>
                                         <li>Grade Tracker - Android App</li>
                                     </ul>
                                 </p>
                             </div>
                             <div class="asset content_texts">
-                                <p>I make assets on my own accord or as per request.
+                                <p>I make assets here and there
                                     <br>
-                                    So, if you need assets that are 2D or 3D for your game and whatnot, you can contact
-                                    me.
+                                    If you like the stuff I make, you can contact me for more
                                     <br><br>
                                     Completed asset packs hosted on <a target="_blank" href="https://jaks.itch.io/">itch.io</a>:
                                     <ul>
@@ -104,7 +104,7 @@
                                     <br><br>
                                     Will also put other stuff (ex. school) on here too. Maybe.
                                     <br><br>
-                                    If you would like to support me by buying a cup of coffee, then you can do so
+                                    If you would like to support me, you can do so
                                     <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GQ78DPFNZS6VG&currency_code=CAD&source=url">
                                         here.</a> 
                                     <br>
